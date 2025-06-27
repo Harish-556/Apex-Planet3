@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Web Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode">
+
+  <header>
+    <h1>🌐 Web Explorer</h1>
+    <p>Learn & Explore Web Tech Basics</p>
+    <button id="theme-toggle">🌙 Toggle Theme</button>
+  </header>
+
+ 
+
+  <section class="card responsive-section">
+    <h2>📱 Responsive Design Simulator</h2>
+    <p>Click below or resize your screen to see how websites behave on different devices!</p>
+  
+    <div class="device-buttons">
+      <button onclick="setDevice('mobile')">📱 Mobile</button>
+      <button onclick="setDevice('tablet')">📲 Tablet</button>
+      <button onclick="setDevice('desktop')">💻 Desktop</button>
+      <button onclick="resetDevice()">🔄 Reset</button>
+    </div>
+  
+    <div id="responsive-box" class="responsive-box">
+      <p>This preview box will look like a real device screen!</p>
+    </div>
+  </section>
+  
+  <section class="card carousel-section">
+    <h2>🖼️ Image Carousel</h2>
+    <div class="carousel">
+      <button onclick="prevImage()">⬅️</button>
+      <img id="carousel-image" src="images/img1.png" alt="carousel image">
+      <button onclick="nextImage()">➡️</button>
+    </div>
+  </section>
+
+  <section class="card api-section">
+    <h2>😄 Random Joke Generator</h2>
+    <button onclick="getJoke()">Tell me a Joke!</button>
+    <p id="joke-text">Click to laugh!</p>
+  </section>
+
+  <section class="card quiz-section">
+    <h2>🧠 Interactive Quiz</h2>
+    <div id="quiz-container" class="quiz-container"></div>
+    <button class="submit-btn" onclick="submitQuiz()">✅ Submit Quiz</button>
+    <p id="quiz-result" class="quiz-result"></p>
+  </section>
+  
+  <footer>
+    <p>📚 Made with more interactions | 🌐 Learn HTML, CSS, JS | 💡 Try resizing your screen!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
